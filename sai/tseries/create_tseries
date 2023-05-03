@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#$ -cwd
+#$ -j yes
+#$ -l h_rt=01:00:00
+#$ -N create_tseries
+#$ -q all.q
+#$ -S /bin/bash
+#$ -pe openmpi 8
+
+source ~/.bashrc_conda
+conda activate esm_course
+
+WRITEDIR=$PWD
+echo "current working directory: ${PWD}"
+
+python create_tseries.py b.e13.B1950TRC5.ne30_g16.ihesp24_2051-2100.003.cam.h0.*.nc >> tseries_log 2>&1
