@@ -45,7 +45,7 @@ echo
 echo "After connection is established in your local browser go to the address:"
 echo "http://localhost:${PORT}"
 
-exit 0
+exit 0   # exit program
 
 jupyter lab --no-browser --port $PORT
 
