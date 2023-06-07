@@ -1,5 +1,8 @@
 #! /bin/bash
 
+# Start jupyter lab on a Snellius compute node
+# Instructions to connect will be printed in output file
+
 #SBATCH -t 00:05:00          # wall clock time
 #SBATCH -N 1                 # number of nodes
 #SBATCH -p thin              # partition
@@ -25,11 +28,10 @@ echo "SLURM_JOB_ACCOUNT:      ${SLURM_JOB_ACCOUNT}"
 echo "SLURM_JOB_PARTITION:    ${SLURM_JOB_PARTITION}"
 echo "SLURM_MEM_PER_NODE:     ${SLURM_MEM_PER_NODE}"
 
+# Make sure the jupyter command is available, either by loading the appropriate modules, sourcing your own virtual environment, etc.
 source $HOME/.bashrc
 conda activate geo
 conda env list
-
-# Make sure the jupyter command is available, either by loading the appropriate modules, sourcing your own virtual environment, etc.
 #module load 2021
 #module load IPython/7.25.0-GCCcore-10.3.0
  
