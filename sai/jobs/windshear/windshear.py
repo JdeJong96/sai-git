@@ -89,7 +89,7 @@ def interp1d_gu(f, x, xi, out):
         i = i + 1
 
 
-def interpolate_to_pressure(ds, names=['u','v'], vdim=None):
+def interpolate_to_pressure(ds, names=['U','V'], vdim=None):
     _names = [name for name in names if name in ds]
     if _names is not names:
         logging.warning(f"variables {set(names)-set(_names)} not in Dataset")
@@ -121,6 +121,7 @@ def main():
         ds[PRES] = hybrid_to_pressure(ds)
     dsi = interpolate_to_pressure(ds)
     ds.close()
+    dsi.to_netcdf(args.outfile)
     return
     
 
