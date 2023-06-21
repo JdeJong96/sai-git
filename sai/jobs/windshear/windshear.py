@@ -90,9 +90,10 @@ def interp1d_gu(f, x, xi, out):
 
 
 def interpolate_to_pressure(ds, names=['U','V'], vdim=None):
-    _names = [name for name in names if name in ds]
-    if _names is not names:
-        logging.warning(f"variables {set(names)-set(_names)} not in Dataset")
+    names_valid = [name for name in names if name in ds]
+    if names_valid is not names:
+        logging.warning(f"variables {set(names)-set(names_valid)} not in Dataset containing: {list(ds.variables)}")
+    logging.info(f"variables to interpolate: {names_valid}")
     if any([p>1100 for p in PLEVS]):
         logging.warning(f"pressure levels must be in hPa (PLEVS = {PLEVS})")
     if vdim is None:
@@ -103,11 +104,11 @@ def interpolate_to_pressure(ds, names=['U','V'], vdim=None):
         {'standard_name':'air_pressure','long_name':'air pressure','units':'Pa'}
     )})
     return xr.apply_ufunc(
-        interp1d_gu,  ds[_names], ds[PRES], ds.p,
+        interp1d_gu,  ds[names_valid], ds[PRES], ds.p,
         input_core_dims=[[vdim], [vdim], [*ds.p.dims]], 
         output_core_dims=[[*ds.p.dims]], 
         exclude_dims=set((vdim,)),  
-        output_dtypes=[ds[_name].dtype for _name in _names],
+        output_dtypes=[ds[name].dtype for name in names_valid],
         keep_attrs=True,
     ).transpose(*ds.p.dims,...).compute()
         
