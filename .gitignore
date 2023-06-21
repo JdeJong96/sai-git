@@ -1,3 +1,4 @@
 sai/prep/data/
 sai/.cache/
+sai/.ipynb_checkpoints/
 sai/jupyter/.ipynb_checkpoints/
