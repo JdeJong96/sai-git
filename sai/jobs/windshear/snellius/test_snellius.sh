@@ -23,7 +23,7 @@ echo "$(date +"%D %T"): Running $0"
 # HR RCP8.5
 CASE=B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014
 CASEDIR=/projects/0/nwo2021025/iHESP_data/HighResMIP/HR/${CASE}
-FILES=$(ls ${CASEDIR}/atm/proc/tseries/hour_6A/${CASE}.cam.*.*.nc | grep -E "\.U\.|\.V\.|\.PS\." | grep "207001")
+FILES=$(ls ${CASEDIR}/atm/proc/tseries/hour_6A/${CASE}.cam.*.*.nc | grep -E "\.U\.|\.V\.|\.PS\.")
 echo "$(date +"%T"): Found $(ls $FILES | wc -l) files in ${CASEDIR}"
 
 # use own version of cdo
