@@ -1,6 +1,4 @@
-sai/prep/data/
-sai/.cache/
-sai/.ipynb_checkpoints/
-sai/jupyter/.ipynb_checkpoints/
-sai/scripts/.ipynb_checkpoints/
-sai/jupyter/.DS_Store
+data/
+.DS_Store
+.ipynb_checkpoints/
+.cache/
