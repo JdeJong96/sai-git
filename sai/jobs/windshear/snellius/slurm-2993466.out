@@ -1,0 +1,121 @@
+TERM environment variable not set.
+06/29/23 19:31:11: Running /var/spool/slurm/slurmd/job2993466/slurm_script
+19:31:11: Found 83 files in /projects/0/nwo2021025/iHESP_data/HighResMIP/HR/B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014
+CDO executable: /home/jasperdj/.conda/envs/geo/bin/cdo
+29-06-2023 19:31:15 INFO: read path: /projects/0/nwo2021025/iHESP_data/HighResMIP/HR/B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014/atm/proc/tseries/hour_6A:
+input file(s):
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.U.2070010100-2071010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.U.2071010100-2072010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.U.2072010100-2073010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.U.2073010100-2074010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.U.2074010100-2075010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.U.2075010100-2076010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.U.2076010100-2077010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.U.2077010100-2078010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.U.2078010100-2079010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.U.2079010100-2079123100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.U.2080010100-2081010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.U.2081010100-2082010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.U.2082010100-2083010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.U.2083010100-2084010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.U.2084010100-2085010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.U.2085010100-2086010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.U.2086010100-2087010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.U.2087010100-2088010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.U.2088010100-2089010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.U.2089010100-2089123100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.U.2090010100-2091010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.U.2091010100-2092010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.U.2092010100-2093010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.U.2093010100-2094010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.U.2094010100-2095010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.U.2095010100-2096010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.V.2070010100-2071010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.V.2071010100-2072010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.V.2072010100-2073010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.V.2073010100-2074010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.V.2074010100-2075010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.V.2075010100-2076010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.V.2076010100-2077010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.V.2077010100-2078010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.V.2078010100-2079010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.V.2079010100-2079123100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.V.2080010100-2081010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.V.2081010100-2082010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.V.2082010100-2083010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.V.2083010100-2084010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.V.2084010100-2085010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.V.2085010100-2086010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.V.2086010100-2087010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.V.2087010100-2088010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.V.2088010100-2089010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.V.2089010100-2089123100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.V.2090010100-2091010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.V.2091010100-2092010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.V.2092010100-2093010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.V.2093010100-2094010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.V.2094010100-2095010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.V.2095010100-2096010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h4.PS.207001-207012.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h4.PS.207101-207112.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h4.PS.207201-207212.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h4.PS.207301-207312.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h4.PS.207401-207412.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h4.PS.207501-207512.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h4.PS.207601-207612.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h4.PS.207701-207712.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h4.PS.207801-207812.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h4.PS.207901-207912.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h4.PS.208001-208012.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h4.PS.208101-208112.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h4.PS.208201-208212.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h4.PS.208301-208312.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h4.PS.208401-208412.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h4.PS.208501-208512.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h4.PS.208601-208612.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h4.PS.208701-208712.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h4.PS.208801-208812.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h4.PS.208901-208912.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h4.PS.209001-209012.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h4.PS.209101-209112.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h4.PS.209201-209212.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h4.PS.209301-209312.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h4.PS.209401-209412.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h4.PS.209501-209512.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h4.PS.209601-209612.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h4.PS.209701-209712.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h4.PS.209801-209812.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h4.PS.209901-209912.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h4.PS.210001-210012.nc
+29-06-2023 19:31:15 INFO: opening ['/projects/0/nwo2021025/iHESP_data/HighResMIP/HR/B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014/atm/proc/tseries/hour_6A/B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.U.2070010100-2071010100.nc', '/projects/0/nwo2021025/iHESP_data/HighResMIP/HR/B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014/atm/proc/tseries/hour_6A/B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.V.2070010100-2071010100.nc', '/projects/0/nwo2021025/iHESP_data/HighResMIP/HR/B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014/atm/proc/tseries/hour_6A/B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h4.PS.207001-207012.nc'] with chunks {'time': 1, 'ncol': 'auto', 'lev': -1}
+29-06-2023 19:31:15 INFO: opening:
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.U.2070010100-2071010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h3.V.2070010100-2071010100.nc
+B.E.13.B1950TRC5.ne120_t12.cesm-ihesp-2051-2100.014.cam.h4.PS.207001-207012.ncwith chunks {'time': 1, 'ncol': 'auto', 'lev': -1}
+29-06-2023 19:32:06 INFO: ...succes!
+29-06-2023 19:32:06 INFO: vertical dimension: lev
+29-06-2023 19:32:06 INFO: new pressure levels: (250, 850) hPa
+29-06-2023 19:32:06 INFO: PS units: Pa
+29-06-2023 19:32:06 INFO: P0 units: Pa
+29-06-2023 19:32:06 INFO: using ('hyam', 'hybm', 'P0', 'PS') to calculate 'P'
+29-06-2023 19:32:06 INFO: variables to interpolate: ['hyam', 'hybm', 'P0', 'hyai', 'hybi', 'cosp_prs_bnds', 'cosp_tau_bnds', 'cosp_ht_bnds', 'cosp_sr_bnds', 'lat', 'area', 'lon', 'ntrm', 'ntrn', 'ntrk', 'ndbase', 'nsbase', 'nbdate', 'nbsec', 'mdt', 'date', 'datesec', 'time_bnds', 'date_written', 'time_written', 'ndcur', 'nscur', 'co2vmr', 'ch4vmr', 'n2ovmr', 'f11vmr', 'f12vmr', 'sol_tsi', 'nsteph', 'U', 'V', 'PS']
+29-06-2023 19:32:06 INFO: writing to /gpfs/home2/jasperdj/sai-git/sai/jobs/windshear/snellius/UV.nc
+/home/jasperdj/.conda/envs/geo/lib/python3.9/site-packages/xarray/conventions.py:205: SerializationWarning: variable date_written has data in the form of a dask array with dtype=object, which means it is being loaded into memory to determine a data type that can be safely stored on disk. To avoid this, coerce this variable to a fixed-size dtype with astype() before saving it.
+  warnings.warn(
+/home/jasperdj/.conda/envs/geo/lib/python3.9/site-packages/xarray/conventions.py:205: SerializationWarning: variable time_written has data in the form of a dask array with dtype=object, which means it is being loaded into memory to determine a data type that can be safely stored on disk. To avoid this, coerce this variable to a fixed-size dtype with astype() before saving it.
+  warnings.warn(
+slurmstepd: error: *** JOB 2993466 ON tcn495 CANCELLED AT 2023-06-29T19:46:31 DUE TO TIME LIMIT ***
+
+JOB STATISTICS
+==============
+Job ID: 2993466
+Cluster: snellius
+User/Group: jasperdj/jasperdj
+State: TIMEOUT (exit code 0)
+Nodes: 1
+Cores per node: 128
+CPU Utilized: 00:00:12
+CPU Efficiency: 0.01% of 1-09:04:00 core-walltime
+Job Wall-clock time: 00:15:30
+Memory Utilized: 19.29 GB
+Memory Efficiency: 8.61% of 224.00 GB

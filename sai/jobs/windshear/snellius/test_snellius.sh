@@ -37,7 +37,7 @@ echo "CDO executable: $(which cdo)"
 #FILES=${TMPDIR}/*.nc
 #echo "$(date +"%T"): done."
 
-echo $FILES
+#echo $FILES
 python windshear.py -v $FILES UV.nc
 #python xr_apply_ufunc_test.py
 

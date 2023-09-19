@@ -35,10 +35,10 @@ from numba import guvectorize
 import numpy as np
 import xarray as xr
 xr.set_options(keep_attrs=True)
-xr.show_versions()
+#xr.show_versions()
 
 # define constants
-YEAR_RANGE = range(2070,2093) # years to analyze
+YEAR_RANGE = range(2070,2073) # years to analyze
 PLEVS = (250, 850)  # pressure levels (hPa) for shear calculation
 PRES = 'P'    # air pressure 
 HYAM = 'hyam' # hybrid a coefficient (only used if P not present)
@@ -157,11 +157,11 @@ def check_globals(ds):
             for term in [PS,P0]:
                 var = ds[term]
                 if not hasattr(var, 'units'):
-                    logging.warning(f"assuming {var} has units 'Pa'")
+                    logging.warning(f"assuming {var.name} has units 'Pa'")
                 elif var.units in ['Pa','pa']:
-                    logging.info(f"{var} units: {var.units}")
+                    logging.info(f"{var.name} units: {var.units}")
                 else:
-                    logging.error(f"{var} units: {var.units}, expected Pa")
+                    logging.error(f"{var.name} units: {var.units}, expected Pa")
                     fatal = True
             logging.info(f"using {HYAM,HYBM,P0,PS} to calculate '{PRES}'")
     else:
@@ -179,12 +179,20 @@ def check_globals(ds):
         fatal = True
     else:
         logging.info(f"variables to interpolate: {NAMES}")
-    logging.info(f"output file: {os.path.abspath(args.outfile)}")
     if fatal:
         logging.critical(f"fatal errors occurred for dataset:\n{ds}")
         logging.critical(f"resolve errors first, aborting...")
         sys.exit(1)
-    return
+
+
+def write_file(ds, fname, year):
+    """add year to filename and save as netCDF"""
+    fnameparts = list(os.path.splitext(fname))
+    fnameparts.insert(1,f"{year:04}")
+    newfname = ''.join(fnameparts)
+    logging.info(f"writing to {os.path.abspath(fname)}")
+    ds.to_netcdf(newfname)
+    logging.info(f"SUCCES")
 
 
 def main():
@@ -213,9 +221,15 @@ def main():
     
     # 
     for year in YEAR_RANGE:
+        time1 = time.perf_counter()  # start timer
         files_year = [f for f in args.files 
-                      if int(file.split('.')[-2][:4]) == year]
+                      if int(f.split('.')[-2][:4]) == year]
         logging.info(f"opening {files_year} with chunks {CHUNKS}")
+        logging.info(
+            "opening:"
+            f"\n{os.linesep.join([os.path.basename(f) for f in files_year])}"
+            f"with chunks {CHUNKS}"
+        )
         try:
             datasets = [xr.open_dataset(f, chunks=CHUNKS) for f in files_year]
         except Exception:
@@ -226,13 +240,10 @@ def main():
             logging.info(f"...succes!")
             check_globals(ds)
             ds = wind_shear(ds) # calculate wind shear
-            logging.info(f"storing interpolated data")
-            outfile = list(os.path.splitext(args.outfile))
-            outfile.insert(1,f'{year}')
-            ds.to_netcdf(''.join(outfile))
-            logging.info(f"SUCCES")
-            time1 = time.perf_counter()
-            logging.info(f"total script time: {time1-time0:.2f} seconds")
+            write_file(ds, args.outfile, year)
+            time2 = time.perf_counter()
+            logging.info(f"processed year {year} in {time2-time1:.2f} seconds")
+    logging.info(f"total script time: {time2-time0:.2f} seconds")
 
 
 if __name__ == '__main__':
