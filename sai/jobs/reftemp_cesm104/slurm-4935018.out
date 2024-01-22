@@ -1,0 +1,1005 @@
+Running /var/spool/slurm/slurmd/job4935018/slurm_script ...
+Submitted from:         int6:/gpfs/home2/jasperdj/sai-git/sai/jobs/reftemp_cesm104
+Start time:             1705908906
+Projected end time:     1705912507
+
+SLURM_JOB_NODELIST:     tcn474
+SLURM_TASKS_PER_NODE:   1
+SLURM_CPUS_PER_TASK:    16
+SLURM_NTASKS:           1
+SLURM_LOCALID:          0
+SLURM_JOB_ID:           4935018
+SLURM_SUBMIT_HOST:      int6
+SLURM_JOB_ACCOUNT:      uuce20038
+SLURM_JOB_PARTITION:    rome
+SLURM_MEM_PER_NODE:     28672
+# conda environments:
+#
+clean_env                /home/jasperdj/.conda/envs/clean_env
+geo                   *  /home/jasperdj/.conda/envs/geo
+base                     /sw/arch/RHEL8/EB_production/2022/software/Miniconda3/4.12.0
+
+To connect to the notebook type the following command from your local terminal:
+ssh -J jasperdj@int6-pub.snellius.surf.nl jasperdj@tcn474.local.snellius.surf.nl -L 5698:localhost:5698
+
+After connection is established in your local browser go to the address:
+http://localhost:5698
+[W 2024-01-22 08:36:12.153 ServerApp] ServerApp.password config is deprecated in 2.0. Use PasswordIdentityProvider.hashed_password.
+[I 2024-01-22 08:36:12.488 ServerApp] Package jupyterlab took 0.0000s to import
+[I 2024-01-22 08:36:13.647 ServerApp] Package dask_labextension took 1.1583s to import
+[W 2024-01-22 08:36:13.647 ServerApp] A `_jupyter_server_extension_points` function was not found in dask_labextension. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2024-01-22 08:36:13.657 ServerApp] Package jupyter_server_fileid took 0.0090s to import
+[I 2024-01-22 08:36:13.663 ServerApp] Package jupyter_server_mathjax took 0.0055s to import
+[I 2024-01-22 08:36:13.664 ServerApp] Package jupyter_server_proxy took 0.0000s to import
+[I 2024-01-22 08:36:13.691 ServerApp] Package jupyter_server_terminals took 0.0271s to import
+[I 2024-01-22 08:36:13.772 ServerApp] Package jupyter_server_ydoc took 0.0808s to import
+[I 2024-01-22 08:36:13.884 ServerApp] Package jupyterlab_git took 0.1111s to import
+[I 2024-01-22 08:36:13.885 ServerApp] Package nbclassic took 0.0000s to import
+[W 2024-01-22 08:36:13.892 ServerApp] A `_jupyter_server_extension_points` function was not found in nbclassic. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2024-01-22 08:36:13.893 ServerApp] Package nbdime took 0.0000s to import
+[I 2024-01-22 08:36:13.893 ServerApp] Package notebook_shim took 0.0000s to import
+[W 2024-01-22 08:36:13.893 ServerApp] A `_jupyter_server_extension_points` function was not found in notebook_shim. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2024-01-22 08:36:13.896 ServerApp] dask_labextension | extension was successfully linked.
+[I 2024-01-22 08:36:14.866 ServerApp] jupyter_server_fileid | extension was successfully linked.
+[I 2024-01-22 08:36:15.829 ServerApp] jupyter_server_mathjax | extension was successfully linked.
+[I 2024-01-22 08:36:15.830 ServerApp] jupyter_server_proxy | extension was successfully linked.
+[I 2024-01-22 08:36:16.795 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2024-01-22 08:36:17.731 ServerApp] jupyter_server_ydoc | extension was successfully linked.
+[I 2024-01-22 08:36:18.690 ServerApp] jupyterlab | extension was successfully linked.
+[I 2024-01-22 08:36:18.690 ServerApp] jupyterlab_git | extension was successfully linked.
+[I 2024-01-22 08:36:19.649 ServerApp] nbclassic | extension was successfully linked.
+[I 2024-01-22 08:36:19.649 ServerApp] nbdime | extension was successfully linked.
+[I 2024-01-22 08:36:22.099 ServerApp] notebook_shim | extension was successfully linked.
+[I 2024-01-22 08:36:22.988 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2024-01-22 08:36:22.991 ServerApp] dask_labextension | extension was successfully loaded.
+[I 2024-01-22 08:36:22.991 FileIdExtension] Configured File ID manager: ArbitraryFileIdManager
+[I 2024-01-22 08:36:22.991 FileIdExtension] ArbitraryFileIdManager : Configured root dir: /gpfs/home2/jasperdj/sai-git/sai/jobs/reftemp_cesm104
+[I 2024-01-22 08:36:22.992 FileIdExtension] ArbitraryFileIdManager : Configured database path: /gpfs/home2/jasperdj/.local/share/jupyter/file_id_manager.db
+[I 2024-01-22 08:36:22.993 FileIdExtension] ArbitraryFileIdManager : Successfully connected to database file.
+[I 2024-01-22 08:36:22.993 FileIdExtension] ArbitraryFileIdManager : Creating File ID tables and indices with journal_mode = DELETE
+[I 2024-01-22 08:36:23.006 FileIdExtension] Attached event listeners.
+[I 2024-01-22 08:36:23.006 ServerApp] jupyter_server_fileid | extension was successfully loaded.
+[I 2024-01-22 08:36:23.007 ServerApp] jupyter_server_mathjax | extension was successfully loaded.
+[I 2024-01-22 08:36:23.020 ServerApp] jupyter_server_proxy | extension was successfully loaded.
+[I 2024-01-22 08:36:23.021 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2024-01-22 08:36:23.022 ServerApp] jupyter_server_ydoc | extension was successfully loaded.
+[I 2024-01-22 08:36:23.023 LabApp] JupyterLab extension loaded from /home/jasperdj/.conda/envs/geo/lib/python3.9/site-packages/jupyterlab
+[I 2024-01-22 08:36:23.023 LabApp] JupyterLab application directory is /gpfs/home2/jasperdj/.conda/envs/geo/share/jupyter/lab
+[I 2024-01-22 08:36:23.323 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2024-01-22 08:36:23.332 ServerApp] jupyterlab_git | extension was successfully loaded.
+[I 2024-01-22 08:36:23.675 ServerApp] nbclassic | extension was successfully loaded.
+[I 2024-01-22 08:36:24.250 ServerApp] nbdime | extension was successfully loaded.
+[I 2024-01-22 08:36:24.251 ServerApp] Serving notebooks from local directory: /gpfs/home2/jasperdj/sai-git/sai/jobs/reftemp_cesm104
+[I 2024-01-22 08:36:24.251 ServerApp] Jupyter Server 2.5.0 is running at:
+[I 2024-01-22 08:36:24.251 ServerApp] http://localhost:5698/lab
+[I 2024-01-22 08:36:24.251 ServerApp]     http://127.0.0.1:5698/lab
+[I 2024-01-22 08:36:24.252 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+2024-01-22 08:36:24,295 - ServerApp - ERROR - Exception in callback functools.partial(<bound method IOLoop._discard_future_result of <tornado.platform.asyncio.AsyncIOMainLoop object at 0x1483c5a28dc0>>, <Task finished name='Task-1' coro=<DaskClusterManager.__init__.<locals>.start_clusters() done, defined at /home/jasperdj/.conda/envs/geo/lib/python3.9/site-packages/dask_labextension/manager.py:66> exception=ImportError("cannot import name 'ignoring' from 'dask.utils' (/home/jasperdj/.conda/envs/geo/lib/python3.9/site-packages/dask/utils.py)")>)
+Traceback (most recent call last):
+  File "/home/jasperdj/.conda/envs/geo/lib/python3.9/site-packages/tornado/ioloop.py", line 740, in _run_callback
+    ret = callback()
+  File "/home/jasperdj/.conda/envs/geo/lib/python3.9/site-packages/tornado/ioloop.py", line 764, in _discard_future_result
+    future.result()
+  File "/home/jasperdj/.conda/envs/geo/lib/python3.9/site-packages/dask_labextension/manager.py", line 68, in start_clusters
+    await self.start_cluster(configuration=model)
+  File "/home/jasperdj/.conda/envs/geo/lib/python3.9/site-packages/dask_labextension/manager.py", line 91, in start_cluster
+    cluster, adaptive = await make_cluster(configuration)
+  File "/home/jasperdj/.conda/envs/geo/lib/python3.9/site-packages/dask_labextension/manager.py", line 26, in make_cluster
+    module = importlib.import_module(dask.config.get("labextension.factory.module"))
+  File "/home/jasperdj/.conda/envs/geo/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/jasperdj/.conda/envs/geo/lib/python3.9/site-packages/dask_jobqueue/__init__.py", line 3, in <module>
+    from .core import JobQueueCluster
+  File "/home/jasperdj/.conda/envs/geo/lib/python3.9/site-packages/dask_jobqueue/core.py", line 13, in <module>
+    from dask.utils import ignoring
+ImportError: cannot import name 'ignoring' from 'dask.utils' (/home/jasperdj/.conda/envs/geo/lib/python3.9/site-packages/dask/utils.py)
+[I 2024-01-22 08:37:49.643 LabApp] 302 GET /lab? (@::1) 1.07ms
+[I 2024-01-22 08:37:56.011 ServerApp] Generating new user for token-authenticated request: 616c1667743144858988e9b968174f6b
+[I 2024-01-22 08:37:56.011 ServerApp] User 616c1667743144858988e9b968174f6b logged in.
+[I 2024-01-22 08:37:56.012 ServerApp] 302 POST /login?next=%2Flab%3F (616c1667743144858988e9b968174f6b@::1) 55.95ms
+[I 2024-01-22 08:38:02.346 LabApp] Build is up to date
+[W 2024-01-22 08:38:06.482 ServerApp] wrote error: 'No such file or directory: sai-git/sai/jupyter/reftemp_cesm104.ipynb'
+    Traceback (most recent call last):
+      File "/home/jasperdj/.conda/envs/geo/lib/python3.9/site-packages/tornado/web.py", line 1713, in _execute
+        result = await result
+      File "/home/jasperdj/.conda/envs/geo/lib/python3.9/site-packages/jupyter_server/services/contents/handlers.py", line 121, in get
+        model = await ensure_async(
+      File "/home/jasperdj/.conda/envs/geo/lib/python3.9/site-packages/jupyter_core/utils/__init__.py", line 182, in ensure_async
+        result = await obj
+      File "/home/jasperdj/.conda/envs/geo/lib/python3.9/site-packages/jupyter_server/services/contents/filemanager.py", line 877, in get
+        raise web.HTTPError(404, "No such file or directory: %s" % path)
+    tornado.web.HTTPError: HTTP 404: Not Found (No such file or directory: sai-git/sai/jupyter/reftemp_cesm104.ipynb)
+[W 2024-01-22 08:38:06.488 ServerApp] 404 GET /api/contents/sai-git/sai/jupyter/reftemp_cesm104.ipynb?content=0&1705909086266 (616c1667743144858988e9b968174f6b@::1) 7.81ms referer=http://localhost:5698/lab?
+[I 2024-01-22 08:38:07.085 ServerApp] New terminal with automatic name: 1
+[W 2024-01-22 08:38:07.901 ServerApp] wrote error: 'No such file or directory: sai-git/sai/jupyter'
+    Traceback (most recent call last):
+      File "/home/jasperdj/.conda/envs/geo/lib/python3.9/site-packages/tornado/web.py", line 1713, in _execute
+        result = await result
+      File "/home/jasperdj/.conda/envs/geo/lib/python3.9/site-packages/jupyter_server/services/contents/handlers.py", line 121, in get
+        model = await ensure_async(
+      File "/home/jasperdj/.conda/envs/geo/lib/python3.9/site-packages/jupyter_core/utils/__init__.py", line 182, in ensure_async
+        result = await obj
+      File "/home/jasperdj/.conda/envs/geo/lib/python3.9/site-packages/jupyter_server/services/contents/filemanager.py", line 877, in get
+        raise web.HTTPError(404, "No such file or directory: %s" % path)
+    tornado.web.HTTPError: HTTP 404: Not Found (No such file or directory: sai-git/sai/jupyter)
+[W 2024-01-22 08:38:07.902 ServerApp] 404 GET /api/contents/sai-git/sai/jupyter?1705909087995 (616c1667743144858988e9b968174f6b@::1) 1.38ms referer=http://localhost:5698/lab?
+[W 2024-01-22 08:38:34.451 ServerApp] Notebook jupyter/reftemp_cesm104.ipynb is not trusted
+[I 2024-01-22 08:38:35.047 ServerApp] Kernel started: ca07d7d9-499a-4290-993b-fd705a47306e
+[I 2024-01-22 08:38:35.898 ServerApp] Connecting to kernel ca07d7d9-499a-4290-993b-fd705a47306e.
+[I 2024-01-22 08:38:35.901 ServerApp] Connecting to kernel ca07d7d9-499a-4290-993b-fd705a47306e.
+[I 2024-01-22 08:38:35.903 ServerApp] Connecting to kernel ca07d7d9-499a-4290-993b-fd705a47306e.
+[I 2024-01-22 08:40:34.898 ServerApp] Saving file at /jupyter/reftemp_cesm104.ipynb
+[W 2024-01-22 08:40:34.898 ServerApp] Notebook jupyter/reftemp_cesm104.ipynb is not trusted
+[W 2024-01-22 08:41:26.671 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:41:26.674 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:41:29.463 ServerApp] iopub messages resumed
+[W 2024-01-22 08:41:29.469 ServerApp] iopub messages resumed
+[W 2024-01-22 08:41:29.797 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:41:29.800 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:41:32.630 ServerApp] iopub messages resumed
+[W 2024-01-22 08:41:32.635 ServerApp] iopub messages resumed
+[W 2024-01-22 08:41:32.962 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:41:32.965 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:41:35.719 ServerApp] iopub messages resumed
+[W 2024-01-22 08:41:35.724 ServerApp] iopub messages resumed
+[W 2024-01-22 08:41:36.105 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:41:36.107 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:41:38.809 ServerApp] iopub messages resumed
+[W 2024-01-22 08:41:38.812 ServerApp] iopub messages resumed
+[W 2024-01-22 08:41:39.610 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:41:39.611 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:41:42.005 ServerApp] iopub messages resumed
+[W 2024-01-22 08:41:42.008 ServerApp] iopub messages resumed
+[W 2024-01-22 08:41:42.382 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:41:42.384 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:41:42.597 ServerApp] iopub messages resumed
+[W 2024-01-22 08:41:42.601 ServerApp] iopub messages resumed
+[W 2024-01-22 08:41:42.759 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:41:42.761 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:41:45.125 ServerApp] iopub messages resumed
+[W 2024-01-22 08:41:45.129 ServerApp] iopub messages resumed
+[W 2024-01-22 08:41:45.502 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:41:45.504 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:41:45.662 ServerApp] iopub messages resumed
+[W 2024-01-22 08:41:45.665 ServerApp] iopub messages resumed
+[W 2024-01-22 08:41:45.978 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:41:45.980 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:41:48.251 ServerApp] iopub messages resumed
+[W 2024-01-22 08:41:48.254 ServerApp] iopub messages resumed
+[W 2024-01-22 08:41:49.019 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:41:49.021 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:41:51.514 ServerApp] iopub messages resumed
+[W 2024-01-22 08:41:51.517 ServerApp] iopub messages resumed
+[W 2024-01-22 08:41:52.102 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:41:52.104 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:41:54.607 ServerApp] iopub messages resumed
+[W 2024-01-22 08:41:54.610 ServerApp] iopub messages resumed
+[W 2024-01-22 08:41:55.351 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:41:55.353 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:41:57.805 ServerApp] iopub messages resumed
+[W 2024-01-22 08:41:57.808 ServerApp] iopub messages resumed
+[W 2024-01-22 08:41:58.497 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:41:58.499 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:00.963 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:00.966 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:01.758 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:01.760 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:04.118 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:04.120 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:05.324 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:05.326 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:07.371 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:07.373 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:08.216 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:08.218 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:10.492 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:10.495 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:11.443 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:11.445 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:13.719 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:13.721 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:14.670 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:14.672 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:16.937 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:16.939 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:18.557 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:18.559 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:20.337 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:20.339 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:21.180 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:21.181 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:21.548 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:21.550 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:21.760 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:21.762 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:23.557 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:23.559 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:24.297 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:24.299 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:24.720 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:24.722 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:24.984 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:24.986 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:26.778 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:26.780 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:27.568 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:27.569 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:27.884 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:27.886 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:28.200 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:28.201 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:30.042 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:30.044 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:31.094 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:31.096 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:33.140 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:33.142 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:34.609 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:34.610 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:36.495 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:36.497 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:38.169 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:38.170 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:39.946 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:39.948 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:41.817 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:41.818 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:43.379 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:43.381 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:46.245 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:46.247 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:46.921 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:46.922 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:49.680 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:49.681 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:50.568 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:50.569 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:51.197 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:51.198 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:51.825 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:51.827 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:52.349 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:52.350 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:53.713 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:53.715 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:54.448 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:54.449 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:55.077 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:55.079 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:55.601 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:55.603 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:57.016 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:57.018 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:57.854 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:57.855 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:58.377 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:58.379 ServerApp] iopub messages resumed
+[W 2024-01-22 08:42:59.005 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:42:59.006 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:43:00.312 ServerApp] iopub messages resumed
+[W 2024-01-22 08:43:00.314 ServerApp] iopub messages resumed
+[W 2024-01-22 08:43:01.253 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2024-01-22 08:43:01.254 ServerApp] IOPub data rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_data_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[I 2024-01-22 08:43:01.426 ServerApp] Kernel interrupted: ca07d7d9-499a-4290-993b-fd705a47306e
+[W 2024-01-22 08:43:01.610 ServerApp] iopub messages resumed
+[W 2024-01-22 08:43:01.611 ServerApp] iopub messages resumed
+[I 2024-01-22 08:43:18.235 ServerApp] Kernel interrupted: ca07d7d9-499a-4290-993b-fd705a47306e
+[I 2024-01-22 08:43:27.744 ServerApp] Kernel interrupted: ca07d7d9-499a-4290-993b-fd705a47306e
+[I 2024-01-22 08:43:42.930 ServerApp] Saving file at /jupyter/reftemp_cesm104.ipynb
+[W 2024-01-22 08:43:42.931 ServerApp] Notebook jupyter/reftemp_cesm104.ipynb is not trusted
+[I 2024-01-22 08:55:11.989 ServerApp] Saving file at /jupyter/reftemp_cesm104.ipynb
+[W 2024-01-22 08:55:11.989 ServerApp] Notebook jupyter/reftemp_cesm104.ipynb is not trusted
+[I 2024-01-22 08:57:12.251 ServerApp] Saving file at /jupyter/reftemp_cesm104.ipynb
+[W 2024-01-22 08:57:12.252 ServerApp] Notebook jupyter/reftemp_cesm104.ipynb is not trusted
+[I 2024-01-22 08:59:12.370 ServerApp] Saving file at /jupyter/reftemp_cesm104.ipynb
+[W 2024-01-22 08:59:12.371 ServerApp] Notebook jupyter/reftemp_cesm104.ipynb is not trusted
+[I 2024-01-22 09:01:12.497 ServerApp] Saving file at /jupyter/reftemp_cesm104.ipynb
+[W 2024-01-22 09:01:12.497 ServerApp] Notebook jupyter/reftemp_cesm104.ipynb is not trusted
+[I 2024-01-22 09:03:12.583 ServerApp] Saving file at /jupyter/reftemp_cesm104.ipynb
+[W 2024-01-22 09:03:12.583 ServerApp] Notebook jupyter/reftemp_cesm104.ipynb is not trusted
+[I 2024-01-22 09:05:12.688 ServerApp] Saving file at /jupyter/reftemp_cesm104.ipynb
+[W 2024-01-22 09:05:12.689 ServerApp] Notebook jupyter/reftemp_cesm104.ipynb is not trusted
+[I 2024-01-22 09:07:12.800 ServerApp] Saving file at /jupyter/reftemp_cesm104.ipynb
+[W 2024-01-22 09:07:12.800 ServerApp] Notebook jupyter/reftemp_cesm104.ipynb is not trusted
+[I 2024-01-22 09:09:12.965 ServerApp] Saving file at /jupyter/reftemp_cesm104.ipynb
+[W 2024-01-22 09:09:12.966 ServerApp] Notebook jupyter/reftemp_cesm104.ipynb is not trusted
+[I 2024-01-22 09:11:13.078 ServerApp] Saving file at /jupyter/reftemp_cesm104.ipynb
+[W 2024-01-22 09:11:13.079 ServerApp] Notebook jupyter/reftemp_cesm104.ipynb is not trusted
+[I 2024-01-22 09:13:13.206 ServerApp] Saving file at /jupyter/reftemp_cesm104.ipynb
+[W 2024-01-22 09:13:13.206 ServerApp] Notebook jupyter/reftemp_cesm104.ipynb is not trusted
+[I 2024-01-22 09:15:13.318 ServerApp] Saving file at /jupyter/reftemp_cesm104.ipynb
+[W 2024-01-22 09:15:13.319 ServerApp] Notebook jupyter/reftemp_cesm104.ipynb is not trusted
+[I 2024-01-22 09:15:59.678 ServerApp] Saving file at /jupyter/reftemp_cesm104.ipynb
+[W 2024-01-22 09:15:59.679 ServerApp] Notebook jupyter/reftemp_cesm104.ipynb is not trusted
+[I 2024-01-22 09:16:13.965 ServerApp] Starting buffering for ca07d7d9-499a-4290-993b-fd705a47306e:c7f0b87d-1769-4656-83d4-a1e8b94de52a
+slurmstepd: error: *** JOB 4935018 ON tcn474 CANCELLED AT 2024-01-22T09:16:54 ***
