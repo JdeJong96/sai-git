@@ -1,0 +1,144 @@
+/home/jasperdj/.conda/envs/esm-lunch/bin/python
+found 12 files in /home/jasperdj/nwo2021025/archive/mres_b.e10.B2000_CAM5.f05_t12.001/atm/hist
+2024-04-01 14:03:16,071 - distributed.worker - WARNING - Compute Failed
+Key:       open_dataset-1f7e74c7-9fca-4030-bfa8-30129cc26c66
+Function:  execute_task
+args:      ((<function apply at 0x14b0cf3fd300>, <function open_dataset at 0x14b0bfbd1440>, ['/scratch-local/jasperdj.5752139/tmpdata/mres_b.e10.B2000_CAM5.f05_t12.001.cam2.h0.2050-11.nc'], (<class 'dict'>, [['engine', None], ['chunks', 'auto'], ['drop_variables', ['date_written', 'time_written']]])))
+kwargs:    {}
+Exception: "OSError(-51, 'NetCDF: Unknown file format')"
+
+2024-04-01 14:03:16,082 - distributed.worker - WARNING - Compute Failed
+Key:       open_dataset-8edbe041-0a38-418d-8d5f-290ef569731b
+Function:  execute_task
+args:      ((<function apply at 0x154704701300>, <function open_dataset at 0x1546f8f49440>, ['/scratch-local/jasperdj.5752139/tmpdata/mres_b.e10.B2000_CAM5.f05_t12.001.cam2.h0.2050-09.nc'], (<class 'dict'>, [['engine', None], ['chunks', 'auto'], ['drop_variables', ['date_written', 'time_written']]])))
+kwargs:    {}
+Exception: "OSError(-51, 'NetCDF: Unknown file format')"
+
+2024-04-01 14:03:16,227 - distributed.worker - WARNING - Compute Failed
+Key:       open_dataset-838a0dc2-e46d-461b-80b6-8ff241ccc484
+Function:  execute_task
+args:      ((<function apply at 0x149f04a6d300>, <function open_dataset at 0x149ef92c9440>, ['/scratch-local/jasperdj.5752139/tmpdata/mres_b.e10.B2000_CAM5.f05_t12.001.cam2.h0.2050-06.nc'], (<class 'dict'>, [['engine', None], ['chunks', 'auto'], ['drop_variables', ['date_written', 'time_written']]])))
+kwargs:    {}
+Exception: "NotImplementedError('Can not use auto rechunking with object dtype. We are unable to estimate the size in bytes of object data')"
+
+2024-04-01 14:03:16,227 - distributed.worker - WARNING - Compute Failed
+Key:       open_dataset-f91139f9-440a-4c8d-93c8-7748394f3879
+Function:  execute_task
+args:      ((<function apply at 0x149f04a6d300>, <function open_dataset at 0x149ef92c9440>, ['/scratch-local/jasperdj.5752139/tmpdata/mres_b.e10.B2000_CAM5.f05_t12.001.cam2.h0.2050-03.nc'], (<class 'dict'>, [['engine', None], ['chunks', 'auto'], ['drop_variables', ['date_written', 'time_written']]])))
+kwargs:    {}
+Exception: "NotImplementedError('Can not use auto rechunking with object dtype. We are unable to estimate the size in bytes of object data')"
+
+2024-04-01 14:03:16,230 - distributed.worker - WARNING - Compute Failed
+Key:       open_dataset-5b1a8f3c-03ef-4925-9143-571e768ee376
+Function:  execute_task
+args:      ((<function apply at 0x14b0cf3fd300>, <function open_dataset at 0x14b0bfbd1440>, ['/scratch-local/jasperdj.5752139/tmpdata/mres_b.e10.B2000_CAM5.f05_t12.001.cam2.h0.2050-10.nc'], (<class 'dict'>, [['engine', None], ['chunks', 'auto'], ['drop_variables', ['date_written', 'time_written']]])))
+kwargs:    {}
+Exception: "NotImplementedError('Can not use auto rechunking with object dtype. We are unable to estimate the size in bytes of object data')"
+
+2024-04-01 14:03:16,230 - distributed.worker - WARNING - Compute Failed
+Key:       open_dataset-cd198b59-a621-41ae-879a-f56e7f9b8d7d
+Function:  execute_task
+args:      ((<function apply at 0x14b0cf3fd300>, <function open_dataset at 0x14b0bfbd1440>, ['/scratch-local/jasperdj.5752139/tmpdata/mres_b.e10.B2000_CAM5.f05_t12.001.cam2.h0.2050-07.nc'], (<class 'dict'>, [['engine', None], ['chunks', 'auto'], ['drop_variables', ['date_written', 'time_written']]])))
+kwargs:    {}
+Exception: "NotImplementedError('Can not use auto rechunking with object dtype. We are unable to estimate the size in bytes of object data')"
+
+2024-04-01 14:03:16,230 - distributed.worker - WARNING - Compute Failed
+Key:       open_dataset-365112ed-3860-4123-9148-9bb68409de6e
+Function:  execute_task
+args:      ((<function apply at 0x154704701300>, <function open_dataset at 0x1546f8f49440>, ['/scratch-local/jasperdj.5752139/tmpdata/mres_b.e10.B2000_CAM5.f05_t12.001.cam2.h0.2050-12.nc'], (<class 'dict'>, [['engine', None], ['chunks', 'auto'], ['drop_variables', ['date_written', 'time_written']]])))
+kwargs:    {}
+Exception: "NotImplementedError('Can not use auto rechunking with object dtype. We are unable to estimate the size in bytes of object data')"
+
+2024-04-01 14:03:16,234 - distributed.worker - WARNING - Compute Failed
+Key:       open_dataset-042d96a3-2eb5-4b1b-8cb5-5cc88ecabf9d
+Function:  execute_task
+args:      ((<function apply at 0x154704701300>, <function open_dataset at 0x1546f8f49440>, ['/scratch-local/jasperdj.5752139/tmpdata/mres_b.e10.B2000_CAM5.f05_t12.001.cam2.h0.2050-08.nc'], (<class 'dict'>, [['engine', None], ['chunks', 'auto'], ['drop_variables', ['date_written', 'time_written']]])))
+kwargs:    {}
+Exception: "NotImplementedError('Can not use auto rechunking with object dtype. We are unable to estimate the size in bytes of object data')"
+
+2024-04-01 14:03:16,261 - distributed.worker - WARNING - Compute Failed
+Key:       open_dataset-2c58529a-a566-4e92-8c4b-b798d51425e5
+Function:  execute_task
+args:      ((<function apply at 0x149f04a6d300>, <function open_dataset at 0x149ef92c9440>, ['/scratch-local/jasperdj.5752139/tmpdata/mres_b.e10.B2000_CAM5.f05_t12.001.cam2.h0.2050-01.nc'], (<class 'dict'>, [['engine', None], ['chunks', 'auto'], ['drop_variables', ['date_written', 'time_written']]])))
+kwargs:    {}
+Exception: "OSError(-51, 'NetCDF: Unknown file format')"
+
+2024-04-01 14:03:16,377 - distributed.worker - WARNING - Compute Failed
+Key:       open_dataset-1e98a284-6988-4646-a679-2c7350f16fda
+Function:  execute_task
+args:      ((<function apply at 0x14fca1bdd300>, <function open_dataset at 0x14fc92435440>, ['/scratch-local/jasperdj.5752139/tmpdata/mres_b.e10.B2000_CAM5.f05_t12.001.cam2.h0.2050-02.nc'], (<class 'dict'>, [['engine', None], ['chunks', 'auto'], ['drop_variables', ['date_written', 'time_written']]])))
+kwargs:    {}
+Exception: "NotImplementedError('Can not use auto rechunking with object dtype. We are unable to estimate the size in bytes of object data')"
+
+2024-04-01 14:03:16,379 - distributed.worker - WARNING - Compute Failed
+Key:       open_dataset-3a956916-343b-40f5-96ed-f9ab4e529f24
+Function:  execute_task
+args:      ((<function apply at 0x14fca1bdd300>, <function open_dataset at 0x14fc92435440>, ['/scratch-local/jasperdj.5752139/tmpdata/mres_b.e10.B2000_CAM5.f05_t12.001.cam2.h0.2050-05.nc'], (<class 'dict'>, [['engine', None], ['chunks', 'auto'], ['drop_variables', ['date_written', 'time_written']]])))
+kwargs:    {}
+Exception: "NotImplementedError('Can not use auto rechunking with object dtype. We are unable to estimate the size in bytes of object data')"
+
+2024-04-01 14:03:16,379 - distributed.worker - WARNING - Compute Failed
+Key:       open_dataset-935b5665-9e49-4a47-af86-4731994929a1
+Function:  execute_task
+args:      ((<function apply at 0x14fca1bdd300>, <function open_dataset at 0x14fc92435440>, ['/scratch-local/jasperdj.5752139/tmpdata/mres_b.e10.B2000_CAM5.f05_t12.001.cam2.h0.2050-04.nc'], (<class 'dict'>, [['engine', None], ['chunks', 'auto'], ['drop_variables', ['date_written', 'time_written']]])))
+kwargs:    {}
+Exception: "NotImplementedError('Can not use auto rechunking with object dtype. We are unable to estimate the size in bytes of object data')"
+
+<Client: 'tcp://127.0.0.1:36827' processes=4 threads=16, memory=28.00 GiB>
+Traceback (most recent call last):
+  File "/gpfs/home2/jasperdj/sai-git/sai/jobs/mres_mean_testing/tmean4.py", line 20, in <module>
+    main()
+  File "/gpfs/home2/jasperdj/sai-git/sai/jobs/mres_mean_testing/tmean4.py", line 14, in main
+    with xr.open_mfdataset(files, chunks='auto', parallel=True, drop_variables=['date_written','time_written']) as ds:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jasperdj/.conda/envs/esm-lunch/lib/python3.11/site-packages/xarray/backends/api.py", line 1064, in open_mfdataset
+    datasets, closers = dask.compute(datasets, closers)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jasperdj/.conda/envs/esm-lunch/lib/python3.11/site-packages/dask/base.py", line 628, in compute
+    results = schedule(dsk, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jasperdj/.conda/envs/esm-lunch/lib/python3.11/site-packages/xarray/backends/api.py", line 573, in open_dataset
+    backend_ds = backend.open_dataset(
+      ^^^^^^^^^^^^^^^^^
+  File "/home/jasperdj/.conda/envs/esm-lunch/lib/python3.11/site-packages/xarray/backends/netCDF4_.py", line 646, in open_dataset
+    store = NetCDF4DataStore.open(
+  ^^^^^^^^^^^^^^^^^
+  File "/home/jasperdj/.conda/envs/esm-lunch/lib/python3.11/site-packages/xarray/backends/netCDF4_.py", line 409, in open
+    return cls(manager, group=group, mode=mode, lock=lock, autoclose=autoclose)
+  ^^^^^^^^^^^^^^^^^
+  File "/home/jasperdj/.conda/envs/esm-lunch/lib/python3.11/site-packages/xarray/backends/netCDF4_.py", line 356, in __init__
+    self.format = self.ds.data_model
+  ^^^^^^^^^^^^^^^^^
+  File "/home/jasperdj/.conda/envs/esm-lunch/lib/python3.11/site-packages/xarray/backends/netCDF4_.py", line 418, in ds
+    return self._acquire()
+  ^^^^^^^^^^^^^^^^^
+  File "/home/jasperdj/.conda/envs/esm-lunch/lib/python3.11/site-packages/xarray/backends/netCDF4_.py", line 412, in _acquire
+    with self._manager.acquire_context(needs_lock) as root:
+  ^^^^^^^^^^^^^^^^^
+  File "/home/jasperdj/.conda/envs/esm-lunch/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+^^^^^^^^^^^^^^^
+  File "/home/jasperdj/.conda/envs/esm-lunch/lib/python3.11/site-packages/xarray/backends/file_manager.py", line 199, in acquire_context
+    file, cached = self._acquire_with_cache_info(needs_lock)
+  ^^^^^^^^^^^^^^^^^
+  File "/home/jasperdj/.conda/envs/esm-lunch/lib/python3.11/site-packages/xarray/backends/file_manager.py", line 217, in _acquire_with_cache_info
+    file = self._opener(*self._args, **kwargs)
+^^^^^^^^^^^
+  File "src/netCDF4/_netCDF4.pyx", line 2463, in netCDF4._netCDF4.Dataset.__init__
+  File "src/netCDF4/_netCDF4.pyx", line 2026, in netCDF4._netCDF4._ensure_nc_success
+OSError: [Errno -51] NetCDF: Unknown file format: b'/scratch-local/jasperdj.5752139/tmpdata/mres_b.e10.B2000_CAM5.f05_t12.001.cam2.h0.2050-11.nc'
+rm: cannot remove '/scratch-local/jasperdj.5752139/tmean4.nc': No such file or directory
+
+JOB STATISTICS
+==============
+Job ID: 5752139
+Cluster: snellius
+User/Group: jasperdj/jasperdj
+State: FAILED (exit code 1)
+Nodes: 1
+Cores per node: 16
+CPU Utilized: 00:00:37
+CPU Efficiency: 2.27% of 00:27:12 core-walltime
+Job Wall-clock time: 00:01:42
+Memory Utilized: 590.50 MB
+Memory Efficiency: 2.06% of 28.00 GB
