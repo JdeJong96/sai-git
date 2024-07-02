@@ -555,3 +555,23 @@ mres_b.e10.B2000_CAM5.f05_t12.001.cam2.h0.2090-10.nc
 mres_b.e10.B2000_CAM5.f05_t12.001.cam2.h0.2090-11.nc
 mres_b.e10.B2000_CAM5.f05_t12.001.cam2.h0.2090-12.nc
 25-06-2024 22:19:53 INFO: opening files
+25-06-2024 22:23:18 INFO: storing interpolated data to data/mres.h0.gmean.nc
+26-06-2024 00:11:57 INFO: SUCCES
+26-06-2024 00:11:57 INFO: total script time: 6723.26 seconds
+Python version: 3.12.2 | packaged by conda-forge | (main, Feb 16 2024, 20:50:58) [GCC 12.3.0]
+Path: ['/gpfs/home2/jasperdj/sai-git/sai/jobs/globalmean', '/home/jasperdj/miniconda3/envs/geo/lib/python312.zip', '/home/jasperdj/miniconda3/envs/geo/lib/python3.12', '/home/jasperdj/miniconda3/envs/geo/lib/python3.12/lib-dynload', '/home/jasperdj/miniconda3/envs/geo/lib/python3.12/site-packages']
+
+JOB STATISTICS
+==============
+Job ID: 6754133
+Cluster: snellius
+User/Group: jasperdj/jasperdj
+State: RUNNING
+Nodes: 1
+Cores per node: 16
+CPU Utilized: 00:00:00
+CPU Efficiency: 0.00% of 1-05:57:20 core-walltime
+Job Wall-clock time: 01:52:20
+Memory Utilized: 0.00 MB (estimated maximum)
+Memory Efficiency: 0.00% of 28.00 GB (1.75 GB/core)
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.
