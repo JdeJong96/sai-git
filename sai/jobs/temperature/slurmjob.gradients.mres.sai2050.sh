@@ -14,5 +14,4 @@ echo "$(date +"%D %T"): Running $0"
 FILES=/projects/0/nwo2021025/archive/mres_b.e10.B2000_CAM5.f05_t12.001/atm/hist/mres_b.e10.B2000_CAM5.f05_t12.001.cam2.h0.????-??.nc
 source $HOME/.bashrc
 conda activate geo
-set -x
 python temperaturegradients.py $FILES data/temperaturegradients.mres.sai2050.nc

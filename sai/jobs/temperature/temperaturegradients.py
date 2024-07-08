@@ -15,6 +15,7 @@ def main():
     # open dataset and set time to center of time_bnds
     ds = xr.open_mfdataset(args.infiles, data_vars="minimal", coords="minimal", 
     join="exact", compat="override", chunks=None)
+    print(f"+{perf_counter()-t0:.1f} sec: opened dataset")
     time = ('time', ds.time_bnds.mean('nbnd').data, ds.time.attrs)
     ds = ds.assign_coords({'ctime':time}).swap_dims({'time':'ctime'})
     ds = ds.drop_vars('time').rename({'ctime':'time'})
@@ -45,8 +46,9 @@ def main():
     dsy.time.encoding['units'] = 'days since 0001-01-01'
 
     # write output
+    dsy.attrs = {'history':f'python temperaturegradients.py {args.infiles} {args.outfile}'}
     dsy.to_netcdf(args.outfile)
-    print(f"{perf_counter()-t0:.1f} sec: created {args.outfile}")
+    print(f"+{perf_counter()-t0:.1f} sec: created {args.outfile}")
     
 
 if __name__ == '__main__':
@@ -60,5 +62,5 @@ if __name__ == '__main__':
     from dask.distributed import Client
     t0 = perf_counter()
     client = Client() # for parallel opening
-    print(f"{perf_counter()-t0:.1f} sec: {client}")
+    print(f"+{perf_counter()-t0:.1f} sec: {client}")
     main()
