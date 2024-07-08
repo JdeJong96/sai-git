@@ -26,7 +26,7 @@ def main():
     T1 = gmean(ds.TREFHT*sinlat).rename('T1')
     T1.attrs.update({'long_name':'Interhemispheric temperature gradient'})
     T2 = gmean(ds.TREFHT*(3*sinlat**2-1)/2).rename('T2')
-    T2.attrs.update({'long_name':'Pole-equator temperature gradient'})
+    T2.attrs.update({'long_name':'Equator-pole temperature gradient'})
     dsm = xr.merge((T0,T1,T2,ds.time_bnds))
     dsm.time.attrs.update(ds.time.attrs) 
 
