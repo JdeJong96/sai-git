@@ -14,7 +14,7 @@ def main():
     
     # open dataset and set time to center of time_bnds
     ds = xr.open_mfdataset(args.infiles, data_vars="minimal", coords="minimal", 
-        join="exact", compat="override", chunks=None, parallel=True)
+        join="exact", compat="override", chunks=None)
     time = ('time', ds.time_bnds.mean('nbnd').data, ds.time.attrs)
     ds = ds.assign_coords({'ctime':time}).swap_dims({'time':'ctime'})
     ds = ds.drop_vars('time').rename({'ctime':'time'})
@@ -26,6 +26,7 @@ def main():
     T1 = gmean(ds.TREFHT*sinlat).rename('T1')
     T2 = gmean(ds.TREFHT*(3*sinlat**2-1)/2).rename('T2')
     xr.merge((T0,T1,T2)).groupby('time.year').mean('time').to_netcdf(args.outfile)
+    print(f"created {args.outfile}")
     
 
 if __name__ == '__main__':
@@ -34,7 +35,8 @@ if __name__ == '__main__':
     import argparse
     import numpy as np
     import xarray as xr
+    import dask
     from dask.distributed import Client
-    client = Client() # set up local cluster
+    client = Client() # for parallel opening
     print(client)
     main()
