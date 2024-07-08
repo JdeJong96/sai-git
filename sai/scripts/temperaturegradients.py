@@ -46,7 +46,7 @@ def main():
     dsy.time.encoding['units'] = 'days since 0001-01-01'
 
     # write output
-    dsy.attrs = {'history':f'python temperaturegradients.py {args.infiles} {args.outfile}'}
+    dsy.attrs = {'history':f'python temperaturegradients.py [{args.infiles[0]} - {args.infiles[-1]}] {args.outfile}'}
     dsy.to_netcdf(args.outfile)
     print(f"+{perf_counter()-t0:.1f} sec: created {args.outfile}")
     
