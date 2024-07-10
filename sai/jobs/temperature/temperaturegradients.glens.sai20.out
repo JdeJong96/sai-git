@@ -1,0 +1,24 @@
+07/10/24 13:10:53: Running /var/spool/slurm/slurmd/job6937297/slurm_script
++2.4 sec: <Client: 'tcp://127.0.0.1:37575' processes=4 threads=16, memory=28.00 GiB>
++3.5 sec: opened dataset
++28.4 sec: created data/temperaturegradients.glens.sai2020.001.nc
++1.8 sec: <Client: 'tcp://127.0.0.1:46051' processes=4 threads=16, memory=28.00 GiB>
++2.2 sec: opened dataset
++27.7 sec: created data/temperaturegradients.glens.sai2020.002.nc
++1.6 sec: <Client: 'tcp://127.0.0.1:42101' processes=4 threads=16, memory=28.00 GiB>
++2.1 sec: opened dataset
++28.5 sec: created data/temperaturegradients.glens.sai2020.003.nc
+
+JOB STATISTICS
+==============
+Job ID: 6937297
+Cluster: snellius
+User/Group: jasperdj/jasperdj
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 16
+CPU Utilized: 00:03:50
+CPU Efficiency: 14.09% of 00:27:12 core-walltime
+Job Wall-clock time: 00:01:42
+Memory Utilized: 1.34 GB
+Memory Efficiency: 4.80% of 28.00 GB
