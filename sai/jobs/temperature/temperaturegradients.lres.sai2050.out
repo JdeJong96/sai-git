@@ -1,17 +1,19 @@
-07/10/24 13:09:52: Running /var/spool/slurm/slurmd/job6937252/slurm_script
-+1.7 sec: <Client: 'tcp://127.0.0.1:35149' processes=4 threads=16, memory=28.00 GiB>
+07/10/24 13:31:06: Running /var/spool/slurm/slurmd/job6937555/slurm_script
++1.7 sec: <Client: 'tcp://127.0.0.1:44433' processes=4 threads=16, memory=28.00 GiB>
++321.2 sec: opened dataset
++428.7 sec: created data/temperaturegradients.lres.sai2050.nc
 
 JOB STATISTICS
 ==============
-Job ID: 6937252
+Job ID: 6937555
 Cluster: snellius
 User/Group: jasperdj/jasperdj
 State: RUNNING
 Nodes: 1
 Cores per node: 16
 CPU Utilized: 00:00:00
-CPU Efficiency: 0.00% of 00:03:28 core-walltime
-Job Wall-clock time: 00:00:13
+CPU Efficiency: 0.00% of 01:58:08 core-walltime
+Job Wall-clock time: 00:07:23
 Memory Utilized: 0.00 MB (estimated maximum)
 Memory Efficiency: 0.00% of 28.00 GB (1.75 GB/core)
 WARNING: Efficiency statistics may be misleading for RUNNING jobs.

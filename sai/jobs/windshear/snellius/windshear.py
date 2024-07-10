@@ -1,6 +1,6 @@
 import os
 import sys
-import time
+from time import perf_counter
 import argparse
 import logging
 #print(f'Python version: {sys.version}')
@@ -120,7 +120,7 @@ def check_globals(ds):
 
 
 def main():
-    time0 = time.perf_counter()  # start timer
+    time0 = perf_counter()  # start timer
     client = Client() # for parallel computing
 
     # parse command line arguments
@@ -147,12 +147,12 @@ def main():
     )
     
     # wind shear calculation
-    time1 = time.perf_counter()  # start timer
+    time1 = perf_counter()  # start timer
     levstr = f'{max(PLEVS)}-{min(PLEVS)} hPa'
     logging.info(f"opening [{args.files[0]} - {args.files[-1]}] with chunks {CHUNKS}")
     with xr.open_mfdataset(args.files, data_vars="minimal", coords="minimal", 
         join="exact", compat="override", chunks=CHUNKS) as ds:
-        time2 = time.perf_counter()
+        time2 = perf_counter()
         logging.info(f"...succes! opening took {time2-time1:.2f} seconds")
         time = ('time', ds.time_bnds.mean('nbnd').data, ds.time.attrs)
         ds = ds.assign_coords({'ctime':time}).swap_dims({'time':'ctime'})
@@ -164,7 +164,7 @@ def main():
             ds = xr_interpolate_pressure(ds)
         USHEAR = ds[VARS['U']].diff(NEWPRES.dims[0], label=LABEL).squeeze()
         VSHEAR = ds[VARS['V']].diff(NEWPRES.dims[0], label=LABEL).squeeze()
-        ds['VWS'] = np.sqrt(USHEAR**2 + VSHEAR**2)
+        ds['VWS'] = np.sqrt(USHEAR**2 + VSHEAR**2).astype('float32')
         ds.VWS.attrs.update({
             'long_name':'vertical wind shear '+levstr,
             'standard_name':'wind_speed_shear',
@@ -172,8 +172,9 @@ def main():
         })
         ds.attrs.update({'history':
             f'python windshear.py [{args.files[0]} - {args.files[-1]}] {args.outfile}'})
+        ds.time.encoding['units'] = 'days since 0001-01-01'
         ds[['VWS',VARS['gw'],VARS['time_bnds'],VARS['lsm']]].to_netcdf(args.outfile)
-        time3 = time.perf_counter()
+        time3 = perf_counter()
         logging.info(f"processed all data in {time3-time1:.2f} seconds")
     return
 
