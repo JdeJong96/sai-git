@@ -9,9 +9,11 @@
 #SBATCH --account=uuce20038    	# account
 #SBATCH --ntasks=1           	# number of tasks
 #SBATCH --cpus-per-task=16   	# cpus per task
+#SBATCH --output=windshear.lres.sai2020.out
+#SBATCH --error=windshear.lres.sai2020.err
 
 echo "$(date +"%D %T"): Running $0"
-FILES=/
+FILES=/projects/0/nwo2021025/archive/lres_b.e10.B2000_CAM5.f09_g16.feedforward.001/atm/hist/lres_b.e10.B2000_CAM5.f09_g16.feedforward.001.cam2.h0.????-??.nc
 source $HOME/.bashrc
 conda activate geo
 python windshear.py $FILES data/windshear.lres.sai2020.nc

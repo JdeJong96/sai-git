@@ -13,7 +13,7 @@
 #SBATCH --error=temperaturegradients.lres.sai2050.err
 
 echo "$(date +"%D %T"): Running $0"
-FILES=nwo2021025/archive/lres_b.e10.B2000_CAM5.f09_g16.feedforward_2050.001/atm/hist/lres_b.e10.B2000_CAM5.f09_g16.feedforward_2050.001.cam2.h0.????-??.nc
+FILES=/projects/0/nwo2021025/archive/lres_b.e10.B2000_CAM5.f09_g16.feedforward_2050.001/atm/hist/lres_b.e10.B2000_CAM5.f09_g16.feedforward_2050.001.cam2.h0.????-??.nc
 source $HOME/.bashrc
 conda activate geo
 python temperaturegradients.py $FILES data/temperaturegradients.lres.sai2050.nc
