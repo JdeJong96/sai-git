@@ -1,0 +1,4 @@
+07/11/24 02:06:49: Running /var/spool/slurm/slurmd/job6944317/slurm_script
++3.0 sec: <Client: 'tcp://127.0.0.1:32855' processes=4 threads=16, memory=28.00 GiB>
++224.2 sec: opened dataset
++428.6 sec: created data/mdr.lres.sai2020.nc

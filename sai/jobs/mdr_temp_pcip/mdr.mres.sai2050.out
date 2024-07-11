@@ -1,0 +1,18 @@
+07/11/24 02:06:27: Running /var/spool/slurm/slurmd/job6944316/slurm_script
++2.1 sec: <Client: 'tcp://127.0.0.1:38173' processes=4 threads=16, memory=28.00 GiB>
++164.3 sec: opened dataset
++296.7 sec: created data/mdr.mres.sai2050.nc
+
+JOB STATISTICS
+==============
+Job ID: 6944316
+Cluster: snellius
+User/Group: jasperdj/jasperdj
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 16
+CPU Utilized: 00:05:59
+CPU Efficiency: 7.21% of 01:22:56 core-walltime
+Job Wall-clock time: 00:05:11
+Memory Utilized: 2.34 GB
+Memory Efficiency: 8.37% of 28.00 GB

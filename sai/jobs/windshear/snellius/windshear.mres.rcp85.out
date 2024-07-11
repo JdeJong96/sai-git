@@ -1,1 +1,15 @@
-07/10/24 14:04:10: Running /var/spool/slurm/slurmd/job6938098/slurm_script
+07/10/24 14:16:54: Running /var/spool/slurm/slurmd/job6938198/slurm_script
+
+JOB STATISTICS
+==============
+Job ID: 6938198
+Cluster: snellius
+User/Group: jasperdj/jasperdj
+State: TIMEOUT (exit code 0)
+Nodes: 1
+Cores per node: 16
+CPU Utilized: 00:00:01
+CPU Efficiency: 0.00% of 12:01:04 core-walltime
+Job Wall-clock time: 00:45:04
+Memory Utilized: 1.13 GB
+Memory Efficiency: 4.03% of 28.00 GB

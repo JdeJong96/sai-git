@@ -164,7 +164,7 @@ def main():
             ds = xr_interpolate_pressure(ds)
         USHEAR = ds[VARS['U']].diff(NEWPRES.dims[0], label=LABEL).squeeze()
         VSHEAR = ds[VARS['V']].diff(NEWPRES.dims[0], label=LABEL).squeeze()
-        ds['VWS'] = np.sqrt(USHEAR**2 + VSHEAR**2).astype('float32')
+        ds['VWS'] = np.sqrt(USHEAR**2 + VSHEAR**2)
         ds.VWS.attrs.update({
             'long_name':'vertical wind shear '+levstr,
             'standard_name':'wind_speed_shear',
@@ -173,6 +173,7 @@ def main():
         ds.attrs.update({'history':
             f'python windshear.py [{args.files[0]} - {args.files[-1]}] {args.outfile}'})
         ds.time.encoding['units'] = 'days since 0001-01-01'
+        ds.VWS.encoding['dtype'] = 'float32'
         ds[['VWS',VARS['gw'],VARS['time_bnds'],VARS['lsm']]].to_netcdf(args.outfile)
         time3 = perf_counter()
         logging.info(f"processed all data in {time3-time1:.2f} seconds")

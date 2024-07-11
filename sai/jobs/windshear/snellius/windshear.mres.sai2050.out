@@ -1,1 +1,15 @@
 07/10/24 14:04:42: Running /var/spool/slurm/slurmd/job6938103/slurm_script
+
+JOB STATISTICS
+==============
+Job ID: 6938103
+Cluster: snellius
+User/Group: jasperdj/jasperdj
+State: FAILED (exit code 1)
+Nodes: 1
+Cores per node: 16
+CPU Utilized: 00:05:20
+CPU Efficiency: 5.62% of 01:34:56 core-walltime
+Job Wall-clock time: 00:05:56
+Memory Utilized: 2.19 GB
+Memory Efficiency: 7.83% of 28.00 GB
