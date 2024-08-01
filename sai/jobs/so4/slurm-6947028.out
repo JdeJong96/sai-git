@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "/var/spool/slurm/slurmd/job6947028/slurm_script", line 38, in <module>
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'
+
+JOB STATISTICS
+==============
+Job ID: 6947028
+Cluster: snellius
+User/Group: jasperdj/jasperdj
+State: RUNNING
+Nodes: 1
+Cores per node: 16
+CPU Utilized: 00:00:00
+CPU Efficiency: 0.00% of 00:02:56 core-walltime
+Job Wall-clock time: 00:00:11
+Memory Utilized: 0.00 MB (estimated maximum)
+Memory Efficiency: 0.00% of 28.00 GB (1.75 GB/core)
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.

@@ -121,7 +121,7 @@ def check_globals(ds):
 
 def main():
     time0 = perf_counter()  # start timer
-    client = Client() # for parallel computing
+    #client = Client() # for parallel computing
 
     # parse command line arguments
     parser = argparse.ArgumentParser()
