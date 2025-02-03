@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # *_* coding: utf-8 *_*
 
+import xarray as xr
+
 
 def wmean(ds:[xr.Dataset,xr.DataArray], w:xr.DataArray, dims, **kwargs):
     """wrapper for xarray weighted mean
@@ -30,14 +32,25 @@ def wmean(ds:[xr.Dataset,xr.DataArray], w:xr.DataArray, dims, **kwargs):
         return dsm
     if 'WMEAN_ATTRS' in globals():
         WMEAN_ATTRS[ds.name] = ds.attrs
-    avgdims = tuple(set(ds.dims).intersection(dims)) # 1
-    if len(avgdims)==0: # 1
-        return ds
+    #avgdims = tuple(set(ds.dims).intersection(dims)) # 1
     coordattrs = {c:ds[c].attrs for c in ds.coords}
-    if set(w.dims).issubset(ds.dims):
-        dsm = ds.weighted(w).mean(avgdims, **kwargs)
-    else: # 3
-        dsm = ds.mean(avgdims, **kwargs)
-    for c in dsm.coords:
-        dsm[c].attrs.update(coordattrs[c]) # 2
-    return dsm
+    avgdims = [dim for dim in dims if (dim in ds.dims) and not (dim in w.dims)]
+    for dim in avgdims:
+        ds = ds.mean(avgdims, **kwargs)
+    avgdims = [dim for dim in dims if (dim in ds.dims) and (dim in w.dims)]
+    for dim in avgdims:
+        ds = ds.weighted(w).mean(avgdims, **kwargs)
+    # if len(avgdims)==0: # 1
+    #     print(f'{dims=} not in {ds.dims=}')
+    #     print(set(ds.dims),dims,set(ds.dims).intersection(dims))
+    #     return ds
+    # coordattrs = {c:ds[c].attrs for c in ds.coords}
+    # if set(w.dims).issubset(ds.dims):
+    #     print('taking weighted mean')
+    #     dsm = ds.weighted(w).mean(avgdims, **kwargs)
+    # else: # 3
+    #     print('taking unweighted mean')
+    #     dsm = ds.mean(avgdims, **kwargs)
+    for c in ds.coords:
+        ds[c].attrs.update(coordattrs[c]) # 2
+    return ds
