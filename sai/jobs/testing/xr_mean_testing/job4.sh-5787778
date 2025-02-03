@@ -1,0 +1,104 @@
+/home/jasperdj/.conda/envs/esm-lunch/bin/python
+found 12 files in /home/jasperdj/nwo2021025/archive/mres_b.e10.B2000_CAM5.f05_t12.001/atm/hist
+<xarray.Dataset> Size: 2GB
+Dimensions:          (lev: 30, ilev: 31, time: 1, lat: 384, lon: 576,
+                      slat: 383, slon: 576, nbnd: 2)
+Coordinates:
+  * lev              (lev) float64 240B 3.643 7.595 14.36 ... 957.5 976.3 992.6
+  * ilev             (ilev) float64 248B 2.255 5.032 10.16 ... 967.5 985.1 1e+03
+  * time             (time) object 8B 2050-02-01 00:00:00
+  * lat              (lat) float64 3kB -90.0 -89.53 -89.06 ... 89.06 89.53 90.0
+  * lon              (lon) float64 5kB 0.0 0.625 1.25 ... 358.1 358.8 359.4
+  * slat             (slat) float64 3kB -89.77 -89.3 -88.83 ... 88.83 89.3 89.77
+  * slon             (slon) float64 5kB -0.3125 0.3125 0.9375 ... 358.4 359.1
+Dimensions without coordinates: nbnd
+Data variables: (12/247)
+    hyam             (lev) float64 240B ...
+    hybm             (lev) float64 240B ...
+    hyai             (ilev) float64 248B ...
+    hybi             (ilev) float64 248B ...
+    P0               float64 8B ...
+    date             (time) int32 4B ...
+    ...               ...
+    so4_a3           (time, lev, lat, lon) float32 27MB ...
+    so4_a3_SRF       (time, lat, lon) float32 885kB ...
+    soa_a1           (time, lev, lat, lon) float32 27MB ...
+    soa_a1_SRF       (time, lat, lon) float32 885kB ...
+    soa_a2           (time, lev, lat, lon) float32 27MB ...
+    soa_a2_SRF       (time, lat, lon) float32 885kB ...
+Attributes:
+    Conventions:      CF-1.0
+    source:           CAM
+    case:             mres_b.e10.B2000_CAM5.f05_t12.001
+    title:            UNSET
+    logname:          renew1
+    host:             tcn670.local.sne
+    Version:          $Name$
+    revision_Id:      $Id$
+    initial_file:     rcp8.5_co2_f05_t12.cam2.i.2045-01-01-00000.nc
+    topography_file:  /projects/0/nwo2021025/cesm1_0_4/inputdata/atm/cam/topo...
+2024-04-04 12:17:29,979 - distributed.worker - WARNING - Compute Failed
+Key:       open_dataset-a988f875-a167-4049-b526-d78c5465bf8d
+Function:  execute_task
+args:      ((<function apply at 0x14a28327d300>, <function open_dataset at 0x14a273a71440>, ['/scratch-local/jasperdj.5787778/tmpdata/mres_b.e10.B2000_CAM5.f05_t12.001.cam2.h0.2050-12.nc'], (<class 'dict'>, [['engine', None], ['chunks', 'auto'], ['drop_variables', ['time_bnds', 'date_written', 'time_written']]])))
+kwargs:    {}
+Exception: "OSError(-51, 'NetCDF: Unknown file format')"
+
+<Client: 'tcp://127.0.0.1:36863' processes=4 threads=16, memory=28.00 GiB>
+Traceback (most recent call last):
+  File "/gpfs/home2/jasperdj/sai-git/sai/jobs/mres_mean_testing/tmean4.py", line 22, in <module>
+    main()
+  File "/gpfs/home2/jasperdj/sai-git/sai/jobs/mres_mean_testing/tmean4.py", line 16, in main
+    with xr.open_mfdataset(files, chunks='auto', parallel=True, drop_variables=['time_bnds','date_written','time_written']) as ds:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jasperdj/.conda/envs/esm-lunch/lib/python3.11/site-packages/xarray/backends/api.py", line 1064, in open_mfdataset
+    datasets, closers = dask.compute(datasets, closers)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jasperdj/.conda/envs/esm-lunch/lib/python3.11/site-packages/dask/base.py", line 628, in compute
+    results = schedule(dsk, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jasperdj/.conda/envs/esm-lunch/lib/python3.11/site-packages/xarray/backends/api.py", line 573, in open_dataset
+    backend_ds = backend.open_dataset(
+      ^^^^^^^^^^^^^^^^^
+  File "/home/jasperdj/.conda/envs/esm-lunch/lib/python3.11/site-packages/xarray/backends/netCDF4_.py", line 646, in open_dataset
+    store = NetCDF4DataStore.open(
+  ^^^^^^^^^^^^^^^^^
+  File "/home/jasperdj/.conda/envs/esm-lunch/lib/python3.11/site-packages/xarray/backends/netCDF4_.py", line 409, in open
+    return cls(manager, group=group, mode=mode, lock=lock, autoclose=autoclose)
+  ^^^^^^^^^^^^^^^^^
+  File "/home/jasperdj/.conda/envs/esm-lunch/lib/python3.11/site-packages/xarray/backends/netCDF4_.py", line 356, in __init__
+    self.format = self.ds.data_model
+  ^^^^^^^^^^^^^^^^^
+  File "/home/jasperdj/.conda/envs/esm-lunch/lib/python3.11/site-packages/xarray/backends/netCDF4_.py", line 418, in ds
+    return self._acquire()
+  ^^^^^^^^^^^^^^^^^
+  File "/home/jasperdj/.conda/envs/esm-lunch/lib/python3.11/site-packages/xarray/backends/netCDF4_.py", line 412, in _acquire
+    with self._manager.acquire_context(needs_lock) as root:
+  ^^^^^^^^^^^^^^^^^
+  File "/home/jasperdj/.conda/envs/esm-lunch/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+^^^^^^^^^^^^^^^
+  File "/home/jasperdj/.conda/envs/esm-lunch/lib/python3.11/site-packages/xarray/backends/file_manager.py", line 199, in acquire_context
+    file, cached = self._acquire_with_cache_info(needs_lock)
+  ^^^^^^^^^^^^^^^^^
+  File "/home/jasperdj/.conda/envs/esm-lunch/lib/python3.11/site-packages/xarray/backends/file_manager.py", line 217, in _acquire_with_cache_info
+    file = self._opener(*self._args, **kwargs)
+^^^^^^^^^^^
+  File "src/netCDF4/_netCDF4.pyx", line 2463, in netCDF4._netCDF4.Dataset.__init__
+  File "src/netCDF4/_netCDF4.pyx", line 2026, in netCDF4._netCDF4._ensure_nc_success
+OSError: [Errno -51] NetCDF: Unknown file format: b'/scratch-local/jasperdj.5787778/tmpdata/mres_b.e10.B2000_CAM5.f05_t12.001.cam2.h0.2050-12.nc'
+rm: cannot remove '/scratch-local/jasperdj.5787778/tmean4.nc': No such file or directory
+
+JOB STATISTICS
+==============
+Job ID: 5787778
+Cluster: snellius
+User/Group: jasperdj/jasperdj
+State: FAILED (exit code 1)
+Nodes: 1
+Cores per node: 16
+CPU Utilized: 00:00:18
+CPU Efficiency: 1.97% of 00:15:12 core-walltime
+Job Wall-clock time: 00:00:57
+Memory Utilized: 1.32 MB
+Memory Efficiency: 0.00% of 28.00 GB
