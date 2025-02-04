@@ -1,7 +1,3 @@
-#!/usr/bin/env python3
-# *_* coding: utf-8 *_*
-
-
 import json
 import os
 import re
@@ -12,7 +8,7 @@ import dask.bag
 import xarray as xr
 
 
-def open_mfdataset(filepaths: list[str], ncstore_dir: str='~/kerchunk', **kwargs):
+def open_mfdataset(filepaths: list[str], ncstore_dir: str='~/kerchunk', verbose=True, **kwargs):
     """a faster alternative to xr.open_mfdataset using kerchunk
     
     This function uses kerchunk to create an NC_STORE reference file,
@@ -26,6 +22,8 @@ def open_mfdataset(filepaths: list[str], ncstore_dir: str='~/kerchunk', **kwargs
         (list of) netCDF file names, may contain wild cards
     ncstore_dir: Pathlike
         Path where NC_STORE reference files will be saved
+    verbose: Bool
+        Whether to print NC_STORE reference file names when reading/writing
     kwargs: dict
         any additional keyword arguments are passed on to xr.open_dataset
         
@@ -43,36 +41,41 @@ def open_mfdataset(filepaths: list[str], ncstore_dir: str='~/kerchunk', **kwargs
         return xr.open_dataset(filepaths[0], **kwargs)
     
     # set default keyword arguments for xr.open_dataset on NC_STORE file
-    default_kw = {'engine':'kerchunk', 'storage_options':{'target_protocol':'file'}}
-    for (k,v) in default_kw.items():
+    required_kw = {'engine':'kerchunk', 'storage_options':{'target_protocol':'file'}}
+    for (k,v) in required_kw.items():
         if k in kwargs:
             print(f'open_mfdataset(): ignoring keyword {k}')
-        kwargs[k] = v
+    kwargs = kwargs | required_kw
     
     # create NC_STORE filename from netCDF filename, including timestamp
     # of first and last file. Open and return dataset if the file already exists
     ncstore_dir = os.path.expanduser(ncstore_dir)
-    timestr = lambda i: os.path.basename(filepaths[i]).split('.')[-2] # timestamp
-    ncstorefile = (os.path.basename(filepaths[0])
-                   .replace(timestr(0),f"{timestr(0)}_{timestr(-1)}")
-                   .replace('.nc','.json'))
+    fparts = os.path.basename(filepaths[0]).split('.')
+    fpartsf = os.path.basename(filepaths[-1]).split('.')
+    fparts[-2] = f'{fparts[-2]}_{fpartsf[-2]}' # time string
+    fparts[-1] = 'json' # extension
+    ncstorefile = '.'.join(fparts)
     ncstore_path = os.path.join(ncstore_dir, ncstorefile)
     if not os.path.exists(ncstore_dir):
         os.mkdir(ncstore_dir)
     elif os.path.exists(ncstore_path):
-        print(f"Reading combined kerchunk reference file {ncstore_path}")
+        if verbose:
+            print(f"Reading combined kerchunk reference file {ncstore_path}")
         return xr.open_dataset(ncstore_path, **kwargs)
     
     # make new NC_STORE data
+    with xr.open_dataset(filepaths[0]) as ds:
+        const_vars = [v for v in ds.variables if 'time' not in ds[v].dims]
     filebag = dask.bag.from_sequence(filepaths, npartitions=None)
     reffiles = (filebag.map(NetCDF3ToZarr, inline_threshold=0, max_chunk_size=0)
                 .map(lambda z: z.translate()).compute())
-    mzz = MultiZarrToZarr(reffiles, concat_dims=['time'], coo_map={'time':'cf:time'})
+    mzz = MultiZarrToZarr(reffiles, concat_dims=['time'], identical_dims=const_vars) #coo_map={'time':'cf:time'})
     
     # write NC_STORE data and return opened dataset
     with open(f"{ncstore_path}", "wb") as f:
-       print(f"Writing combined kerchunk reference file {ncstore_path}")
-       f.write(json.dumps(mzz.translate()).encode())
+        if verbose:
+            print(f"Writing combined kerchunk reference file {ncstore_path}")
+        f.write(json.dumps(mzz.translate()).encode())
     
     return xr.open_dataset(ncstore_path, **kwargs)
 
