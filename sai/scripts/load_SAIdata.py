@@ -40,13 +40,6 @@ def open_mfdataset(filepaths: list[str], ncstore_dir: str='~/kerchunk', verbose=
     if len(filepaths) == 1: # use xr.open_dataset directly if there is one file
         return xr.open_dataset(filepaths[0], **kwargs)
     
-    # set default keyword arguments for xr.open_dataset on NC_STORE file
-    required_kw = {'engine':'kerchunk', 'storage_options':{'target_protocol':'file'}}
-    for (k,v) in required_kw.items():
-        if k in kwargs:
-            print(f'open_mfdataset(): ignoring keyword {k}')
-    kwargs = kwargs | required_kw
-    
     # create NC_STORE filename from netCDF filename, including timestamp
     # of first and last file. Open and return dataset if the file already exists
     ncstore_dir = os.path.expanduser(ncstore_dir)
@@ -76,6 +69,13 @@ def open_mfdataset(filepaths: list[str], ncstore_dir: str='~/kerchunk', verbose=
         if verbose:
             print(f"Writing combined kerchunk reference file {ncstore_path}")
         f.write(json.dumps(mzz.translate()).encode())
+
+    # set default keyword arguments for xr.open_dataset on NC_STORE file
+    required_kw = {'engine':'kerchunk', 'storage_options':{'target_protocol':'file'}}
+    for (k,v) in required_kw.items():
+        if k in kwargs:
+            print(f'open_mfdataset(): ignoring keyword {k}')
+    kwargs = kwargs | required_kw
     
     return xr.open_dataset(ncstore_path, **kwargs)
 
